@@ -1,0 +1,257 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  background-color: #333333;
+  padding: 20px;
+}
+header h1 {
+  text-align: center;
+  color: white;
+}
+
+.box1 {
+  padding-top: 20px;
+}
+.box1 h2 {
+  margin-left: 10px;
+  font-family: none;
+}
+.box1 div {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.box1 p {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333333;
+}
+.box1 img:first-child {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+.box1 img:last-child {
+  margin-top: 20px;
+  width: 95%;
+  height: auto;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+aside .asideBox1 {
+  padding-left: 10px;
+}
+aside .asideBox1 i {
+  color: #F2994A;
+  font-size: 32px;
+}
+aside .asideBox1 div {
+  display: inline-block;
+  margin-left: 10px;
+}
+aside .asideBox1 div p:first-child {
+  color: #BDBDBD;
+}
+aside .asideBox1 div p:last-child {
+  color: #F2994A;
+}
+aside .asideBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 95%;
+}
+aside .asideBox2 div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  background-color: #BDBDBD;
+  background-color: #BDBDBD;
+  padding: 7px;
+  border-radius: 15px;
+}
+aside .asideBox2 div i {
+  color: #4F4F4F;
+  align-self: center;
+}
+aside .asideBox2 div div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+}
+aside .asideBox2 div div p:first-child {
+  color: white;
+  margin-bottom: 8px;
+}
+aside .asideBox2 div div p:last-child {
+  color: #333333;
+}
+
+h3 {
+  font-family: none;
+  color: #333333;
+}
+
+.subBox2 {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.subBox2 h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-family: none;
+  font-weight: normal;
+  font-size: 2.5vh;
+}
+.subBox2 .step {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.subBox2 .step .checkContainer {
+  position: relative;
+}
+.subBox2 .step .checkContainer > input {
+  height: 25px;
+  width: 25px;
+  margin-right: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subBox2 .step .checkContainer > input:hover {
+  border-color: #0066ff;
+}
+.subBox2 .step .checkContainer > input:after {
+  content: "✓";
+  color: #333333;
+  font-size: 2vh;
+  display: none;
+}
+.subBox2 .step .checkContainer > input:checked:after {
+  display: block;
+}
+.subBox2 .step p {
+  margin-right: 20px;
+  color: #333333;
+}
+
+.InstructionsLabel {
+  font-size: 3.5vh;
+}
+
+.instructions {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+}
+.instructions .instruction {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.instructions .instruction p:nth-child(1) {
+  background-color: #F2994A;
+  padding: 6px 13px;
+  color: white;
+  font-family: none;
+  font-weight: bold;
+  font-size: 3vh !important;
+  border-radius: 8px;
+  height: 10%;
+}
+.instructions .instruction p:nth-child(2) {
+  margin-right: 20px;
+  margin-left: 15px;
+  color: #333333;
+}
+
+footer {
+  padding: 20px;
+  background-color: #333333;
+}
+footer p {
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 450px) {
+  aside .asideBox2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .box1 h2 {
+    font-size: 5vh;
+    margin-left: 130px;
+  }
+
+  .box1 div {
+    margin-left: 130px;
+  }
+
+  aside {
+    margin-top: 60px;
+  }
+  aside .asideBox2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box2 .subBox2 h3 {
+    font-size: 4.5vh;
+  }
+
+  .subBox2 h4 {
+    font-size: 3.5vh;
+  }
+
+  .boxContainer {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .box1 img:last-child {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

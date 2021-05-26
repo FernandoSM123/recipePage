@@ -1,0 +1,255 @@
+$orange: #F2994A
+$gray1: #BDBDBD
+$gray2: #4F4F4F
+$black :#333333
+
+*
+    padding: 0
+    margin: 0
+    font-family: Arial, Helvetica, sans-serif
+
+html
+    min-height: 100%
+
+body
+    height: 100%
+
+//header
+header
+    background-color: #333333
+    padding: 20px
+
+    h1
+        text-align: center
+        color: white
+
+//box1
+.box1
+    padding-top: 20px
+
+    h2
+        margin-left: 10px
+        font-family: none
+
+    div
+        display: flex
+        flex-direction: row
+        margin-left: 10px
+        margin-top: 20px
+
+    p
+        margin-left: 20px
+        margin-right: 20px
+        color: $black
+
+    img:first-child
+        align-self: flex-start
+        margin-top: 8px
+
+    img:last-child
+        margin-top: 20px
+        width: 95%
+        height: auto
+        margin-left: 10px
+        border-radius: 25px
+
+//boxContainer
+.boxContainer
+    display: flex
+    flex-direction: column
+
+//aside
+aside
+    margin-top: 20px
+    margin-left: 10px
+
+    .asideBox1
+        padding-left: 10px
+
+        i
+            color: $orange
+            font-size: 32px
+
+        div
+            display: inline-block
+            margin-left: 10px
+
+            p:first-child
+                color: $gray1
+
+            p:last-child
+                color: $orange
+
+    .asideBox2
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 20px
+        width: 95%
+
+        div
+            display: flex
+            flex-direction: row
+            margin-bottom: 10px
+            background-color: $gray1
+            background-color: #BDBDBD
+            padding: 7px
+            border-radius: 15px
+
+            i
+                color: $gray2
+                align-self: center
+
+            div
+                display: flex
+                flex-direction: column
+                margin-left: 3px
+
+                p:first-child
+                    color: white
+                    margin-bottom: 8px
+
+                p:last-child
+                    color: $black
+
+//box2
+
+h3
+    font-family: none
+    color: $black
+
+.subBox2
+    margin-left: 20px
+    margin-top: 25px
+
+    //ingredients box
+    h4
+        margin-top: 20px
+        margin-bottom: 20px
+        font-style: italic
+        font-family: none
+        font-weight: normal
+        font-size: 2.5vh
+
+    .step
+        display: flex
+        flex-direction: row
+        margin-bottom: 10px
+
+        .checkContainer
+            position: relative
+
+        .checkContainer > input
+            height: 25px
+            width: 25px
+            margin-right: 7px
+            -webkit-appearance: none
+            -moz-appearance: none
+            -o-appearance: none
+            appearance: none
+            border: 1px solid $black
+            border-radius: 5px
+            background-color: white
+            cursor: pointer
+            display: flex
+            justify-content: center
+            align-items: center
+        
+        .checkContainer > input:hover
+            border-color: #0066ff
+
+        .checkContainer > input:after
+            content: '\2713'
+            color:$black
+            font-size: 2vh
+            display: none
+
+        .checkContainer > input:checked:after
+            display: block
+
+        p
+            margin-right: 20px
+            color:$black
+
+//Instructions
+
+.InstructionsLabel
+    font-size: 3.5vh
+
+.instructions
+    margin-top: 20px
+    margin-left: 10px
+    margin-bottom: 100px
+
+    .instruction
+        margin-top: 20px
+        display: flex
+        flex-direction: row
+
+        p:nth-child(1)
+            background-color: #F2994A
+            padding: 6px 13px
+            color: white
+            font-family: none
+            font-weight: bold
+            font-size: 3vh !important
+            border-radius: 8px
+            height: 10%
+
+        p:nth-child(2)
+            margin-right: 20px
+            margin-left: 15px
+            color: $black
+        
+
+//footer
+footer
+    padding: 20px
+    background-color: #333333
+
+    p
+        text-align: center
+        color: white
+
+//*************
+//MEDIA QUERIES
+//*************    
+
+@media only screen and (min-width: 450px)
+
+    aside .asideBox2
+        flex-direction: row
+        justify-content: space-around
+
+@media only screen and (min-width: 1000px)
+   
+    .box1 h2
+        font-size: 5vh
+        margin-left: 130px
+
+    .box1 div
+        margin-left: 130px
+
+    aside
+        margin-top: 60px
+
+        .asideBox2
+            flex-direction: column
+            align-items: center
+
+    .box2 .subBox2 h3
+        font-size: 4.5vh
+
+    .subBox2 h4
+        font-size: 3.5vh
+
+    .boxContainer
+        flex-direction: row-reverse
+        justify-content: space-around
+        margin-top: 20px
+
+    .box1 img:last-child
+        display: block
+        margin-left: auto
+        margin-right: auto
+        width: 80%
